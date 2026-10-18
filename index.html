@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es-CL" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111820">
+  <meta name="description" content="SNK Garage: ficha vehicular, documentos con OCR, cargas de combustible y gastos en pesos chilenos.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="stylesheet" href="styles.css?v=4.0.0">
+  <link rel="stylesheet" href="ui.css?v=4.0.0">
+  <title>SNK Garage | Mi auto, mis documentos</title>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" aria-label="Menú lateral">
+    <a class="brand" href="#inicio" id="brandLink" aria-label="SNK Garage, inicio">
+      <span class="brand-symbol">SNK</span>
+      <span class="brand-copy"><strong>SNK <em>GARAGE</em></strong><small>Tu centro automotriz</small></span>
+    </a>
+    <div class="side-caption">MI GARAJE</div>
+    <nav class="side-nav" aria-label="Navegación">
+      <button class="nav-item active" type="button" data-nav="inicio"><span data-icon="grid"></span><span>Resumen</span></button>
+      <button class="nav-item" type="button" data-nav="vehiculos"><span data-icon="car"></span><span>Vehículos</span><span id="navVehicleCount" class="nav-count">0</span></button>
+      <button class="nav-item" type="button" data-nav="documentos"><span data-icon="file"></span><span>Documentos</span></button>
+      <button class="nav-item" type="button" data-nav="combustible"><span data-icon="fuel"></span><span>Combustible</span></button>
+      <button class="nav-item" type="button" data-nav="gastos"><span data-icon="wallet"></span><span>Finanzas</span></button>
+      <button class="nav-item" type="button" data-nav="vencimientos"><span data-icon="calendar"></span><span>Vencimientos</span></button>
+    </nav>
+    <div class="sidebar-bottom">
+      <button class="nav-item" data-nav="respaldo" type="button"><span data-icon="database"></span><span>Respaldo y datos</span></button>
+      <button class="nav-item" data-action="theme-toggle" type="button"><span data-icon="spark"></span><span>Cambiar apariencia</span></button>
+      <div class="privacy-notice"><span class="privacy-pulse"></span><span>Datos locales · Sin cuenta</span></div>
+    </div>
+  </aside>
+  <div class="main-layout">
+    <header class="topbar">
+      <div class="topbar-leading">
+        <div class="top-brand-mobile"><span class="monogram">S</span><strong>SNK <span>GARAGE</span></strong></div>
+        <div class="breadcrumb"><span class="breadcrumb-prefix">GARAJE</span><span class="breadcrumb-sep">/</span><strong id="pageCrumb">Resumen</strong></div>
+        <span class="top-subtitle" id="topDate"></span>
+      </div>
+      <div class="topbar-actions">
+        <label class="vehicle-selector-label" for="vehicleSelect">Vehículo activo</label>
+        <select id="vehicleSelect" class="vehicle-selector" aria-label="Seleccionar vehículo"><option value="">Sin vehículos</option></select>
+        <button class="btn btn-quiet top-add" data-action="new-car" type="button" aria-label="Agregar vehículo"><span data-icon="plus"></span><span>Agregar auto</span></button>
+      </div>
+    </header>
+    <main id="mainContent" class="content" tabindex="-1"><div class="loading-state">Cargando tu garaje…</div></main>
+    <footer class="footer">SNK GARAGE · Datos almacenados en este navegador · v4.0</footer>
+  </div>
+</div>
+<nav class="mobile-nav" aria-label="Navegación móvil">
+  <button type="button" class="active" data-nav="inicio"><span data-icon="grid"></span><small>Inicio</small></button>
+  <button type="button" data-nav="vehiculos"><span data-icon="car"></span><small>Autos</small></button>
+  <button type="button" data-nav="combustible"><span data-icon="fuel"></span><small>Cargas</small></button>
+  <button type="button" data-nav="documentos"><span data-icon="file"></span><small>Docs</small></button>
+  <button type="button" id="moreButton" data-action="toggle-more" aria-expanded="false" aria-controls="mobileMoreMenu"><span data-icon="grid"></span><small>Más</small></button>
+</nav>
+<div class="mobile-more-menu" id="mobileMoreMenu" hidden>
+  <button class="more-backdrop" type="button" data-action="close-more" aria-label="Cerrar menú"></button>
+  <div class="more-sheet" role="dialog" aria-label="Más opciones">
+    <div class="more-heading"><strong>Más opciones</strong><button type="button" data-action="close-more" aria-label="Cerrar">×</button></div>
+    <button type="button" data-nav="gastos"><span data-icon="wallet"></span> Gastos y presupuesto</button>
+    <button type="button" data-nav="vencimientos"><span data-icon="calendar"></span> Vencimientos</button>
+    <button type="button" data-nav="respaldo"><span data-icon="database"></span> Respaldo y privacidad</button>
+    <button type="button" data-action="theme-toggle"><span data-icon="spark"></span> Alternar tema claro / oscuro</button>
+  </div>
+</div>
+<div id="modalRoot"></div>
+<div id="previewRoot"></div>
+<div id="toastArea" class="toast-area" role="status" aria-live="polite"></div>
+<script type="module" src="app.js?v=4.0.0"></script>
+</body>
+</html>

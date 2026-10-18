@@ -1,0 +1,21 @@
+SNK GARAGE v4.0 — PUBLICAR DESDE TU SAMSUNG
+
+1. Si ya registraste autos o documentos en v3, entra en Más > Respaldo y descarga una copia JSON.
+2. Extrae el ZIP en Descargas.
+3. Abre Chrome en modo Sitio para computadoras.
+4. Entra a github.com/Alxs13/SNK_Garage.
+5. Add file > Upload files > selecciona los 12 archivos extraídos (NO el ZIP).
+6. Confirma con Commit changes.
+7. Espera la publicación en Actions. Tu URL sigue siendo:
+   https://alxs13.github.io/SNK_Garage/
+
+CÓMO USAR:
+- Agregar auto > escribe patente > Consultar patente (experimental, datos externos disponibles).
+- Docs > Subir documentos > selecciona PDF o JPG/PNG > Leer con OCR > Revisa ficha > Guardar.
+- Docs > Ver archivo abre foto/PDF original y permite descargar.
+- Cargas > registra litros, bencina, precio total, kilometraje y boleta.
+- Más > Respaldo > descarga copias periódicas.
+
+EL OCR NECESITA INTERNET LA PRIMERA VEZ Y PUEDE EQUIVOCARSE.
+LA CONSULTA POR PATENTE DEPENDE DE UN SERVICIO EXTERNO NO OFICIAL.
+NUNCA SUBAS DOCUMENTOS DEL AUTO O RESPALDOS PERSONALES A GITHUB.
